@@ -5,9 +5,9 @@ In this project, I leveraged student engagement data from the course IEOR E4579 
 I first did some feature engineering, for example, created BERT embeddings of the prompts, and then used K-means to generate a taxonomy of at least 10 ways to separate content.
 
 ## candidate_generator.ipynb
-Given a list of content and a specific user, I generated a list of content that might match this user's preferences using collaborative filtering, specifically [memory based approach](https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0).
+Given a list of content and a specific user, I generated a list of content that might match this user's preferences using content-based filtering.
 I implemented 3 functions:
-* Offline training
+* Offline training: get user embeddings and item embeddings (engagement + prompt)
 * Pre-computation
 * Online training: given a user id with all their data, return a list of new content
 
