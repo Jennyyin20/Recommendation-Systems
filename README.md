@@ -13,3 +13,6 @@ I implemented 3 functions:
 
 ## build_llm.ipynb
 I first built a Generatively Pretrained Transformer (GPT) to generate new text based on input. Big thanks to [Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY) for sharing his ideas. I used this model as a pretrained model, and then changed some settings like the final layer, loss function etc. to build a new model that can predict user interaction on a scale from -1 to 1 (-1 means dislike, 1 means like). The model works well and reaches test MSE of 0.1249.
+
+## explore_exploit_cold_start.ipynb
+I implemented multi-armed bandit, specifically epsilon-greedy, to address the cold start problem. The algorithm uses interaction calculated from taxonomy data for filtering out contents the selected user likes and calculating reward, and recommends content_id from content data.
